@@ -26,13 +26,13 @@ export const CheckboxField = ({
     ...props
   } = useCheckboxFieldProps(field);
   const { isInvalid, error } = useFieldError(field);
-  const { isFieldRequired, ...requiredProps } = useRequiredProps(
+  const { required: isRequired, ...requiredProps } = useRequiredProps({
     field,
-    required
-  );
+    required,
+  });
 
   return (
-    <FormControl isInvalid={isInvalid} isRequired={isFieldRequired}>
+    <FormControl isInvalid={isInvalid} isRequired={isRequired}>
       <Checkbox
         {...uiProps}
         {...props}

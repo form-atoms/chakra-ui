@@ -22,7 +22,7 @@ export const Required: FormStory = {
   },
 };
 
-const newsletter = checkboxField({ optional: true });
+const newsletter = checkboxField().optional();
 
 export const Optional: FormStory = {
   ...optionalField,

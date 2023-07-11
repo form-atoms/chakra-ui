@@ -7,7 +7,7 @@ import {
 import {
   FieldProps,
   RequiredProps,
-  ValidatedFieldAtom,
+  ZodField,
   useRequiredProps,
 } from "@form-atoms/field";
 import { ReactNode, useId } from "react";
@@ -27,7 +27,7 @@ type Children = RenderProp<
   }
 >;
 
-export const ChakraField = <Field extends ValidatedFieldAtom<any>>({
+export const ChakraField = <Field extends ZodField<any>>({
   field,
   label,
   helperText,
@@ -36,10 +36,13 @@ export const ChakraField = <Field extends ValidatedFieldAtom<any>>({
 }: FieldProps<Field> & ChakraFieldProps & Children) => {
   const id = useId();
   const { error, isInvalid } = useFieldError(field);
-  const { isFieldRequired, ...props } = useRequiredProps(field, required);
+  const { required: isRequired, ...props } = useRequiredProps({
+    field,
+    required,
+  });
 
   return (
-    <FormControl isInvalid={isInvalid} isRequired={isFieldRequired}>
+    <FormControl isInvalid={isInvalid} isRequired={isRequired}>
       {label && <FormLabel htmlFor={id}>{label}</FormLabel>}
       {children({ ...props, id, helperText })}
       <FormErrorMessage>{error}</FormErrorMessage>

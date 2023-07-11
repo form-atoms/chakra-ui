@@ -1,4 +1,4 @@
-import { fileField } from "@form-atoms/field";
+import { filesField } from "@form-atoms/field";
 
 import { FileField } from "./FileField";
 import { FormStory, meta } from "../stories";
@@ -8,7 +8,7 @@ export default {
   ...meta,
 };
 
-const profilePicture = fileField();
+const profilePicture = filesField();
 
 export const Required: FormStory = {
   args: {

@@ -36,7 +36,7 @@ export const StoryForm = <Fields extends FormFields>({
           <Button type="submit" colorScheme="teal">
             Submit
           </Button>
-          <Button colorScheme="gray" onClick={reset}>
+          <Button colorScheme="gray" onClick={() => reset()}>
             Reset
           </Button>
         </Stack>
@@ -73,3 +73,11 @@ export const meta = {
 } satisfies Meta<typeof StoryForm>;
 
 export type FormStory = StoryObj<typeof meta>;
+
+// The StoryObj meta type omits the generic parameter, so the fields in children args are untyped
+// this way we build the args with generic fields BEFORE the FormStory runs over it
+export const formStory = <Fields extends FormFields>(
+  props: {
+    args: StoryFormProps<Fields>;
+  } & Omit<FormStory, "args">
+) => props;

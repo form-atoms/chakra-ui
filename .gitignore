@@ -1,3 +1,10 @@
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 /public
 /node_modules
 /storybook-static

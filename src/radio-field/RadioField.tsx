@@ -1,5 +1,5 @@
 import { Radio, RadioGroup, Stack } from "@chakra-ui/react";
-import { SelectFieldProps, useSelectOptions } from "@form-atoms/field";
+import { SelectFieldProps, useOptions } from "@form-atoms/field";
 import { useFieldActions, useInputFieldProps } from "form-atoms";
 
 import { ChakraField, ChakraFieldProps } from "../chakra-field";
@@ -14,8 +14,8 @@ export const RadioField = <Option,>({
   helperText,
 }: SelectFieldProps<Option> & ChakraFieldProps) => {
   const inputProps = useInputFieldProps(field);
-  const { renderOptions } = useSelectOptions(field, {
-    getValue,
+  const { renderOptions } = useOptions({
+    field,
     getLabel,
     options,
   });
@@ -37,8 +37,8 @@ export const RadioField = <Option,>({
           onBlur={() => inputProps.onBlur()}
         >
           <Stack>
-            {renderOptions.map(({ value, label }) => (
-              <Radio key={value} value={value}>
+            {renderOptions.map(({ id, label }) => (
+              <Radio key={id} value={getValue(id)}>
                 {label}
               </Radio>
             ))}
