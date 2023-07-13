@@ -10,6 +10,7 @@ export default {
 };
 
 const rating = numberField({
+  value: 3,
   schema: z.number().min(0).max(20),
 });
 

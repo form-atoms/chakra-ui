@@ -29,13 +29,12 @@ export const NumberField = ({
       label={label}
       helperText={helperText}
     >
-      {(fieldProps) => (
+      {({ id }) => (
         <NumberInput
+          id={id}
           value={value}
           onChange={(_, numVal) => actions.setValue(numVal)}
           name={name}
-          {...numberInputProps}
-          {...fieldProps}
         >
           <NumberInputField onChange={onChange} />
           <NumberInputStepper>

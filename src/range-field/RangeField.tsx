@@ -16,12 +16,15 @@ export const RangeField = ({
   required,
   helperText,
   defaultValue,
+  min = 0,
   ...sliderProps
 }: NumberFieldProps & SliderProps) => {
   const props = useNumberFieldProps(field);
   const actions = useFieldActions(field);
 
   useFieldInitialValue(field, defaultValue);
+
+  const value = props.value || min;
 
   return (
     <ChakraField
@@ -32,11 +35,11 @@ export const RangeField = ({
     >
       {({ id }) => (
         <Slider
-          name={props.name}
-          value={props.value}
-          onChange={actions.setValue}
-          {...sliderProps}
           id={id}
+          value={value}
+          name={props.name}
+          {...sliderProps}
+          onChange={actions.setValue}
         >
           <SliderTrack>
             <SliderFilledTrack />

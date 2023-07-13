@@ -1,9 +1,18 @@
 {
-  "extends": "../../tsconfig.build.json",
+  "extends": "./tsconfig",
   "compilerOptions": {
+    "isolatedModules": false,
+    "composite": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
     "outDir": "dist",
     "rootDir": "src"
   },
   "include": ["src"],
-  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx"]
+  "exclude": [
+    "src/showcase/*",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
+    "src/**/*.skip.tsx"
+  ]
 }

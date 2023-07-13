@@ -8,3 +8,5 @@
 /public
 /node_modules
 /storybook-static
+dist/
+tsconfig.build.tsbuildinfo

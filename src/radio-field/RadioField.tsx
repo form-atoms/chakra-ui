@@ -1,10 +1,15 @@
 import { Radio, RadioGroup, Stack } from "@chakra-ui/react";
-import { SelectFieldProps, useOptions } from "@form-atoms/field";
-import { useFieldActions, useInputFieldProps } from "form-atoms";
+import {
+  SelectProps,
+  SelectField,
+  useOptions,
+  useSelectFieldProps,
+} from "@form-atoms/field";
+import { useFieldActions } from "form-atoms";
 
 import { ChakraField, ChakraFieldProps } from "../chakra-field";
 
-export const RadioField = <Option,>({
+export const RadioField = <Option, Field extends SelectField>({
   field,
   options,
   getValue,
@@ -12,15 +17,18 @@ export const RadioField = <Option,>({
   label,
   required,
   helperText,
-}: SelectFieldProps<Option> & ChakraFieldProps) => {
-  const inputProps = useInputFieldProps(field);
+}: SelectProps<Option, Field> & ChakraFieldProps) => {
+  const inputProps = useSelectFieldProps({ field, options, getValue });
   const { renderOptions } = useOptions({
     field,
-    getLabel,
     options,
+    getLabel,
   });
   const actions = useFieldActions(field);
 
+  // TODO: rename to RadioGroupField
+  // TODO: inputProps not changing when value changed
+  // TODO: handle rest of props
   return (
     <ChakraField
       field={field}
@@ -28,17 +36,23 @@ export const RadioField = <Option,>({
       required={required}
       helperText={helperText}
     >
-      {() => (
+      {(props) => (
         <RadioGroup
+          id={props.id}
           name={inputProps.name}
-          value={inputProps.value}
-          onChange={actions.setValue}
+          value={`${inputProps.value}`}
+          onChange={(strIndex) => {
+            const value = getValue(options[parseInt(strIndex)]!);
+            console.log(value);
+
+            actions.setValue(value);
+          }}
           // @ts-ignore
           onBlur={() => inputProps.onBlur()}
         >
           <Stack>
-            {renderOptions.map(({ id, label }) => (
-              <Radio key={id} value={getValue(id)}>
+            {renderOptions.map(({ id, value, label }) => (
+              <Radio key={id} id={id} value={`${value}`}>
                 {label}
               </Radio>
             ))}
