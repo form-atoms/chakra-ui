@@ -37,7 +37,7 @@
     "@chakra-ui/storybook-addon": "5.1.0",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
-    "@form-atoms/field": "^3.8.0",
+    "@form-atoms/field": "^3.8.1",
     "@mdx-js/react": "^2.3.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",

@@ -3592,7 +3592,7 @@ __metadata:
     "@chakra-ui/storybook-addon": "npm:5.1.0"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@form-atoms/field": "npm:^3.8.0"
+    "@form-atoms/field": "npm:^3.8.1"
     "@mdx-js/react": "npm:^2.3.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:^10.0.1"
@@ -3646,9 +3646,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@form-atoms/field@npm:^3.8.0":
-  version: 3.8.0
-  resolution: "@form-atoms/field@npm:3.8.0"
+"@form-atoms/field@npm:^3.8.1":
+  version: 3.8.1
+  resolution: "@form-atoms/field@npm:3.8.1"
   dependencies:
     react-render-prop-type: "npm:0.1.0"
   peerDependencies:
@@ -3657,7 +3657,7 @@ __metadata:
     jotai-effect: ^0
     react: ">=16.8"
     zod: ^3
-  checksum: 483d043a0cab3dcb0c650d24e51db4e67512905faf9b00e4586666596047c1bfee16a16e499b3dccf3c2df3b68268f9e1c62604c8a8ddfeea4406cf6b3420166
+  checksum: 7acf06d343eb81226c2da200de9044a8846810801c2489483630db5e6502e85e151f6609491646d81ec27c3f427be2e1142c031098de2d951436083e9c29e62d
   languageName: node
   linkType: hard
 
