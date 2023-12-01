@@ -18,6 +18,11 @@
     "semantic-release": "semantic-release"
   },
   "packageManager": "yarn@4.0.2",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react atom form",
     "react field",

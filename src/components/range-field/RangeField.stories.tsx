@@ -1,8 +1,9 @@
 import { numberField } from "@form-atoms/field";
 import { z } from "zod";
 
+import { FormStory, meta } from "@/stories";
+
 import { RangeField } from "./RangeField";
-import { FormStory, meta } from "../../stories";
 
 export default {
   title: "RangeField",

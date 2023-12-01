@@ -1,7 +1,8 @@
 import { filesField } from "@form-atoms/field";
 
+import { FormStory, meta } from "@/stories";
+
 import { FileField } from "./FileField";
-import { FormStory, meta } from "../../stories";
 
 export default {
   title: "FileField",

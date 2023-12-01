@@ -1,8 +1,9 @@
 import { checkboxField } from "@form-atoms/field";
 import React from "react";
 
+import { FormStory, meta, optionalField } from "@/stories";
+
 import { CheckboxField } from "./CheckboxField";
-import { FormStory, meta, optionalField } from "../../stories";
 
 export default {
   title: "CheckboxField",
