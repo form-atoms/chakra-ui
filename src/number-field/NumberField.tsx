@@ -16,7 +16,6 @@ export const NumberField = ({
   required,
   label,
   helperText,
-  ...numberInputProps
 }: NumberFieldProps & NumberInputProps & ChakraFieldProps) => {
   const { value, name, onChange } = useNumberFieldProps(field);
 

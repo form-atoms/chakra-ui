@@ -1,7 +1,7 @@
 import { Radio, RadioGroup, Stack } from "@chakra-ui/react";
 import {
-  SelectProps,
   SelectField,
+  SelectProps,
   useOptions,
   useSelectFieldProps,
 } from "@form-atoms/field";
@@ -47,7 +47,6 @@ export const RadioField = <Option, Field extends SelectField>({
 
             actions.setValue(value);
           }}
-          // @ts-ignore
           onBlur={() => inputProps.onBlur()}
         >
           <Stack>

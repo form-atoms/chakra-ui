@@ -20,7 +20,9 @@ export const CheckboxField = ({
   ...uiProps
 }: CheckboxFieldProps & CheckboxProps) => {
   const {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     "aria-invalid": _, // ERR: chakra does not accept false value for this prop
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     ref, // BUG: ref causes infinite renders
     checked,
     ...props

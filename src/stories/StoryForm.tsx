@@ -79,5 +79,5 @@ export type FormStory = StoryObj<typeof meta>;
 export const formStory = <Fields extends FormFields>(
   props: {
     args: StoryFormProps<Fields>;
-  } & Omit<FormStory, "args">
+  } & Omit<FormStory, "args">,
 ) => props;

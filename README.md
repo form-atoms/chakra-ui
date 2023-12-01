@@ -7,6 +7,10 @@
 
 This package binds to headless components which must be installed first [Check `@form-atoms/field`](https://github.com/MiroslavPetrik/form-atoms-field#readme).
 
+```
+yarn add jotai jotai-effects form-atoms @form-atoms/field
+```
+
 ### Installation
 
 ```
