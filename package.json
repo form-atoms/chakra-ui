@@ -3,9 +3,9 @@
   "version": "0.0.0-semantic-release",
   "type": "module",
   "author": "Miroslav Petrik <miroslavpetrik@outlook.com>",
-  "homepage": "https://github.com/MiroslavPetrik/form-atoms-chakra-ui#readme",
-  "repository": "github:MiroslavPetrik/form-atoms-chakra-ui",
-  "bugs": "https://github.com/MiroslavPetrik/form-atoms-chakra-ui/issues",
+  "homepage": "https://github.com/form-atoms/chakra-ui#readme",
+  "repository": "github:form-atoms/chakra-ui",
+  "bugs": "https://github.com/form-atoms/chakra-ui/issues",
   "license": "MIT",
   "scripts": {
     "build": "tsc --build ./tsconfig.build.json",
