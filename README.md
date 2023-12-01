@@ -5,7 +5,7 @@
     <img width="120" style="margin: 32px" src="https://raw.githubusercontent.com/form-atoms/flowbite/main/public/plus-light.svg#gh-dark-mode-only">
     <img width="110" style="margin: 32px" src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logomark-colored.svg">
   </div>
-  <h1>Form Atoms bindings to [chakra-ui](https://chakra-ui.com/docs/components)</h1>
+  <h1>Form Atoms bindings to <a href="https://chakra-ui.com/docs/components">chakra-ui</a></h1>
 </div>
 
 <a aria-label="NPM version" href="https://www.npmjs.com/package/%40form-atoms/chakra-ui">
