@@ -11,7 +11,7 @@ import {
   useRequiredProps,
 } from "@form-atoms/field";
 
-import { useFieldError } from "../hooks";
+import { useFieldError } from "../../hooks";
 
 export const CheckboxField = ({
   field,

@@ -1,7 +1,7 @@
 import { numberField } from "@form-atoms/field";
 
 import { NumberField } from "./NumberField";
-import { FormStory, meta } from "../stories";
+import { FormStory, meta } from "../../stories";
 
 export default {
   title: "NumberField",
