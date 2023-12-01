@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/form-atoms/chakra-ui/compare/v1.0.0...v1.0.1) (2023-12-01)
+
+
+### Bug Fixes
+
+* ignore story form in build ([9cd2257](https://github.com/form-atoms/chakra-ui/commit/9cd225770c3f359e00ee1341f08fd5daa92b256c))
+
 # 1.0.0 (2023-12-01)
 
 
