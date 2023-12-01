@@ -5,7 +5,6 @@
 !.yarn/sdks
 !.yarn/versions
 
-/public
 /node_modules
 /storybook-static
 dist/
